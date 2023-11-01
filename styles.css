@@ -11,8 +11,8 @@
   .button2 {
     display: block !important; /* Asegúrate de que los botones sean elementos de bloque */
     position: absolute !important; /* Posición absoluta para que los botones no se vean afectados por otros elementos de la escena */
-    top: 60vh !important; /* Posición desde la parte superior de la ventana */
-    left: 10vw !important; /* Posición desde el lado izquierdo de la ventana */
+    top: 60% !important; /* Posición desde la parte superior de la ventana */
+    left: 5% !important; /* Posición desde el lado izquierdo de la ventana */
     z-index: 1 !important; /* Asegúrate de que los botones estén en la capa superior */
     color: blue;
     background-color: aqua;
@@ -27,3 +27,4 @@
     color: blue;
     background-color: aqua;
   }
+
