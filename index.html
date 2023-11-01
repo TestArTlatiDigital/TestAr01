@@ -4,27 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo Ar TlatiDigital</title>
+  <link rel="stylesheet" href="styles.css">
+
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 
   <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar-nft.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.3.0/dist/aframe-master.min.js"></script>
- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+
  
 </head>
 <body>
+  <!-- <button>Rtx</button> -->
+  <!-- <button class="button1" onclick="acercarModelo()">Acercar Modelo</button> -->
   <a-scene>
+    
+
+    <!-- <a-entity position="0 2 -3" <button class="button1" onclick="acercarModelo()">Acercar Modelo</button>> </a-entity> -->
+    <!-- <button>Rtx</button> -->
     <a-assets>
       <a-asset-item id="ventage" src="./modelo/VentageCloud_v003.gltf"></a-asset-item>
     </a-assets>
 
-    <a-entity gltf-model="#ventage" position="0 2 -3" rotation="90 0 0"  scale="0.1 0.1 0.1"></a-entity>
+    <a-entity id="entidad" gltf-model="#ventage" position="0 2 -3" rotation="90 0 0"  scale="0.1 0.1 0.1"></a-entity>
     
     <a-entity position="0 1.6 0" camera wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
 
     <!-- <a-entity camera="active: false" position="0 1.6 0" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity> -->
     
+    <button class="button1" onclick="acercarModelo()">Acercar Modelo</button>
+    <button class="button2" onclick="alejarModelo()">Alejar Modelo</button>
+    <button class="button3" onclick="rotarModelo()">Rotar Modelo</button>
+
+    <!-- <button style="z-index: -10;">Rtx1</button> -->
+    
   </a-scene>
 
+  <!-- <button>Rtx</button> -->
+
 </body>
+<script>
+ var modelo = document.querySelector('#entidad');
+
+function acercarModelo() {
+// console.log(modelo)
+modelo.object3D.scale.x *= 1.1; // Aumenta el tamaño del modelo en un 10% en el eje X
+modelo.object3D.scale.y *= 1.1; // Aumenta el tamaño del modelo en un 10% en el eje Y
+modelo.object3D.scale.z *= 1.1; // Aumenta el tamaño del modelo en un 10% en el eje Z
+}
+
+// Función para alejar el modelo
+function alejarModelo() {
+modelo.object3D.scale.x /= 1.1; // Reduce el tamaño del modelo en un 10% en el eje X
+modelo.object3D.scale.y /= 1.1; // Reduce el tamaño del modelo en un 10% en el eje Y
+modelo.object3D.scale.z /= 1.1; // Reduce el tamaño del modelo en un 10% en el eje Z
+}
+
+// Función para rotar el modelo
+function rotarModelo() {
+modelo.object3D.rotation.y += Math.PI / 4; // Rota el modelo 45 grados alrededor del eje Y
+}
+</script>
 </html>

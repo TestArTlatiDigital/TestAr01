@@ -1,0 +1,29 @@
+.button1 {
+    display: block !important; /* Asegúrate de que los botones sean elementos de bloque */
+    position: absolute !important; /* Posición absoluta para que los botones no se vean afectados por otros elementos de la escena */
+    top: 50vh !important; /* Posición desde la parte superior de la ventana */
+    left: 10vw !important; /* Posición desde el lado izquierdo de la ventana */
+    z-index: 1 !important; /* Asegúrate de que los botones estén en la capa superior */
+    color: blue;
+    background-color: aqua;
+  }
+
+  .button2 {
+    display: block !important; /* Asegúrate de que los botones sean elementos de bloque */
+    position: absolute !important; /* Posición absoluta para que los botones no se vean afectados por otros elementos de la escena */
+    top: 60vh !important; /* Posición desde la parte superior de la ventana */
+    left: 10vw !important; /* Posición desde el lado izquierdo de la ventana */
+    z-index: 1 !important; /* Asegúrate de que los botones estén en la capa superior */
+    color: blue;
+    background-color: aqua;
+  }
+
+  .button3 {
+    display: block !important; /* Asegúrate de que los botones sean elementos de bloque */
+    position: absolute !important; /* Posición absoluta para que los botones no se vean afectados por otros elementos de la escena */
+    top: 40vh !important; /* Posición desde la parte superior de la ventana */
+    left: 10vw !important; /* Posición desde el lado izquierdo de la ventana */
+    z-index: 1 !important; /* Asegúrate de que los botones estén en la capa superior */
+    color: blue;
+    background-color: aqua;
+  }
